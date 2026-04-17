@@ -1,0 +1,14 @@
+[Unit]
+Description=Arma Reforger Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_LINUX_USER
+WorkingDirectory=/home/YOUR_LINUX_USER/arma_bot
+ExecStart=/home/YOUR_LINUX_USER/arma_bot/venv/bin/python bot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
